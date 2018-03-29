@@ -1,0 +1,272 @@
+@import "font-awesome/scss/font-awesome";
+@import "override-bootstrap-defaults";
+@import "variables";
+@import "media-queries";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  min-height: 75rem; /* Can be removed; just added for demo purposes */
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+.album {
+  min-height: 50rem; /* Can be removed; just added for demo purposes */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+// /*----------  HERO SECTION  ----------*/
+.hero-area, .hero-area-2 {
+  .content-block {
+    h1 {
+      color: $light;
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      margin-bottom: 15px;
+      @include tablet {
+        font-size: 40px;
+      }
+    }
+    p {
+      color: $light;
+      font-size: 20px;
+      @include tablet {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+.hero-area {
+  padding: 100px 0 0;
+  // contents
+  .content-block {
+
+    & > div {
+      padding: 45px;
+      border: 5px white double;
+
+      hr {
+        width: 75px;
+        border-top: 3px solid rgb(255, 255, 255);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        color: #c28f55;
+      }
+    }
+
+    .lead {
+      font-size: 15px;
+    }
+  }
+
+  // advanced search
+  .check-date {
+    background: $white;
+    padding: 30px;
+    border-radius: 3px;
+    margin-bottom: -50px;
+    box-shadow: -1px 3px 6px rgba(0, 0, 0, 0.12);
+    @include mobile {
+      margin-bottom: -80px;
+    }
+
+    .block {
+      @include mobile {
+        display: block !important;
+      }
+    }
+    // custom form contron styles
+    .form-control {
+      color: #000;
+      border-color: $border-color;
+    }
+    button {
+      display: block;
+      width: 20%;
+      @include mobile {
+        width: 100%;
+      }
+
+      margin-left: 30px;
+      border: 1px solid #c28f55;
+    }
+
+    .d-flex {
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #000;
+      margin: 5px;
+      i {
+        margin-left: 30px;
+        font-size: 1.5rem;
+        color: #c28f55;
+      }
+    }
+  }
+}
+
+.short-popular-category-list {
+  margin-top: 40px;
+  h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $white;
+  }
+  ul {
+    margin-top: 20px;
+    li {
+      margin: 0 2px;
+      a {
+        border: 1px solid #404040;
+        color: #c1c1c1;
+        font-weight: 200;
+        padding: 4px 10px;
+        font-size: 12px;
+        i {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}
+
+.page-breadcrumb {
+  background: none;
+  margin-top: 10px;
+  margin-bottom: 0;
+  li {
+    a {
+      color: $white;
+    }
+    &.active {
+      color: $white !important;
+    }
+  }
+}
+
+.bg-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../images/02222018-weddings.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+}
+
+.features-icons {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &.main-page {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+
+    color: #000;
+  }
+
+  &.why-we {
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8)), url('../images/2331-min.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+
+    i {
+      color: #c28f55;
+    }
+  }
+
+  .title {
+    margin-bottom: 5rem;
+  }
+}
+
+.portfolio {
+  padding-top: 4rem;
+
+  background: url('../images/lepectok2.png'), url('../images/f433vnthf.png');
+  background-repeat: no-repeat;
+  //background-size: cover;
+  //background-attachment: fixed;
+  background-position: center;
+
+  .title {
+    margin-bottom: 3rem;
+  }
+
+  .card {
+    background: fixed;
+
+    img {
+      padding: 5%;
+      background-color: #f2f2f2;
+      background: 1px #fff solid;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .2);
+    }
+  }
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 2.5rem;
+  padding: 15px;
+}
+
+.m-auto {
+  margin: auto !important;
+}

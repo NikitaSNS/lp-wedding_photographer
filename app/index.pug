@@ -1,0 +1,171 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Bootstrap 4 Webpack 3
+  body
+    #navbarHeader.collapse.bg-inverse
+      .container
+        .row
+          .col-sm-8.py-4
+            h4.text-white About
+            p.text-muted
+              | Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.
+          .col-sm-4.py-4
+            h4.text-white Contact
+            ul.list-unstyled
+              li
+                a.text-white(href='#') Follow on Twitter
+              li
+                a.text-white(href='#') Like on Facebook
+              li
+                a.text-white(href='#') Email me
+    .navbar.navbar-inverse.bg-inverse
+      .container.d-flex.justify-content-between
+        a.navbar-brand(href='#') Album
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarHeader', aria-controls='navbarHeader', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+
+    section.hero-area.bg-1.text-center.overly
+      // Container Start
+      .container
+        .row
+          .col-md-12
+            // Header Contetnt
+            .content-block
+              div
+                h1
+                  | Получите профессиональное свадебное видео
+                  br
+                  | по цене 12 000 рублей только в этом месяце
+                hr
+                p
+                  | или 8 часов видео и фото за 22 990 руб.
+                  br
+                  | При заключении договора до конца месяца скидка до 15%
+              section.features-icons.bg-light.text-center
+                section.features-icons.bg-light.text-center
+                  .container
+                    .row
+                      .col-lg-3
+                        .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
+                          .features-icons-icon.d-flex
+                            i.fa.fa-file-video-o.m-auto(aria-hidden='true')
+                          p.lead.mb-0
+                            | Фото и видео съемка
+                            br
+                            | в течение целого дня -
+                            br
+                            | фотограф, оператор,
+                            br
+                            | ассистент на 15 часов!
+                      .col-lg-3
+                        .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
+                          .features-icons-icon.d-flex
+                            i.fa.fa-check-circle-o.m-auto(aria-hidden='true')
+                          p.lead.mb-0
+                            | Художественный монтаж
+                            br
+                            | видео в киноформате,
+                            br
+                            | ретушь лучших фотографий
+                            br
+                            | и полная цветокоррекция
+                      .col-lg-3
+                        .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
+                          .features-icons-icon.d-flex
+                            i.fa.fa-hdd-o.m-auto(aria-hidden='true')
+                          p.lead.mb-0
+                            | Фотографии
+                            br
+                            | и фильм
+                            br
+                            | на эксклюзивной
+                            br
+                            | флеш-карте
+                      .col-lg-3
+                        .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
+                          .features-icons-icon.d-flex
+                            i.fa.fa-instagram.m-auto(aria-hidden='true')
+                          p.lead.mb-0
+                            | Видео и фотографии
+                            br
+                            | для Instagram
+                            br
+                            | и других
+                            br
+                            | социальных сетей
+
+            .check-date
+              .row
+                .col-md-12
+                  .block.d-flex
+                    h1
+                      | Напишите сейчас и узнайте, свободна ли ваша дата
+                      i.fa.fa-long-arrow-right(aria-hidden='true')
+                    // Search Button
+                    button.btn Проверить дату
+    section.features-icons.bg-light.text-center.main-page.why-we
+      section.features-icons.bg-light.text-center
+        .container
+          .row
+            .col-lg-12
+                h1.title Почему мы?
+            .col-lg-3
+              .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
+                .features-icons-icon.d-flex
+                  i.fa.fa-calendar.m-auto(aria-hidden='true')
+                p.lead.mb-0
+                  | Более 500 свадеб
+                  br
+                  | за 6 лет работы
+            .col-lg-3
+              .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
+                .features-icons-icon.d-flex
+                  i.fa.fa-clock-o.m-auto(aria-hidden='true')
+                p.lead.mb-0
+                  | Съемочный день до 30%
+                  br
+                  | длиннее, чем у других
+            .col-lg-3
+              .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
+                .features-icons-icon.d-flex
+                  i.fa.fa-television.m-auto(aria-hidden='true')
+                p.lead.mb-0
+                  | Съемка в качестве
+                  br
+                  | Full HD и 4K
+            .col-lg-3
+              .features-icons-item.mx-auto.mb-5.mb-lg-0.mb-lg-3
+                .features-icons-icon.d-flex
+                  i.fa.fa-film.m-auto(aria-hidden='true')
+                p.lead.mb-0
+                  | Кино
+                  br
+                  | стандарт монтажа
+
+    .portfolio.text-muted
+      .container
+        .row.text-center
+          .col-sm-12
+            h1.title
+              | Портфолио
+
+          each val in [1, 2, 3, 4, 5, 6]
+            .card.col-sm-4
+              img(data-src='holder.js/100px280/thumb', alt='Card image cap')
+              p.card-text
+                | Видео / фото
+                =' ' + val
+
+    footer.text-muted
+      .container
+        p.float-right
+          a(href='#') Back to top
+        p Album example is © Bootstrap, but please download and customize it for yourself!
+        p
+          | New to Bootstrap?
+          a(href='../../') Visit the homepage
+          |  or read our
+          a(href='../../getting-started/') getting started guide
+          | .
